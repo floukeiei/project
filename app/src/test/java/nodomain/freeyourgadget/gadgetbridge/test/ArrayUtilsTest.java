@@ -14,10 +14,9 @@ import static org.junit.Assert.fail;
 public class ArrayUtilsTest extends TestBase {
 
     private static final byte[] EMPTY = new byte[0];
-    private static final byte[] DATA_5 = new byte[] { 1, 2, 3, 4, 5};
+    private static final byte[] DATA_5 = new byte[]{1, 2, 3, 4, 5};
 
     public ArrayUtilsTest() throws Exception {
-        //ss
     }
 
     @Test
@@ -84,17 +83,17 @@ public class ArrayUtilsTest extends TestBase {
 
     @Test
     public void testEquals123() throws Exception {
-        assertTrue(ArrayUtils.equals(DATA_5, new byte[] {1, 2, 3}, 0));
+        assertTrue(ArrayUtils.equals(DATA_5, new byte[]{1, 2, 3}, 0));
     }
 
     @Test
     public void testEquals234() throws Exception {
-        assertTrue(ArrayUtils.equals(DATA_5, new byte[] {2, 3, 4}, 1));
+        assertTrue(ArrayUtils.equals(DATA_5, new byte[]{2, 3, 4}, 1));
     }
 
     @Test
     public void testEquals345() throws Exception {
-        assertTrue(ArrayUtils.equals(DATA_5, new byte[] {3, 4, 5}, 2));
+        assertTrue(ArrayUtils.equals(DATA_5, new byte[]{3, 4, 5}, 2));
     }
 
     @Test
@@ -104,22 +103,22 @@ public class ArrayUtilsTest extends TestBase {
 
     @Test
     public void testEqualsWrongStart() throws Exception {
-        assertFalse(ArrayUtils.equals(DATA_5, new byte[] {0, 2, 3}, 0));
+        assertFalse(ArrayUtils.equals(DATA_5, new byte[]{0, 2, 3}, 0));
     }
 
     @Test
     public void testEqualsWrongEnd() throws Exception {
-        assertFalse(ArrayUtils.equals(DATA_5, new byte[] {3, 4, 6}, 2));
+        assertFalse(ArrayUtils.equals(DATA_5, new byte[]{3, 4, 6}, 2));
     }
 
     @Test
     public void testStartsWith1() throws Exception {
-        assertTrue(ArrayUtils.startsWith(DATA_5, new byte[] {1}));
+        assertTrue(ArrayUtils.startsWith(DATA_5, new byte[]{1}));
     }
 
     @Test
     public void testStartsWith2() throws Exception {
-        assertTrue(ArrayUtils.startsWith(DATA_5, new byte[] {1, 2}));
+        assertTrue(ArrayUtils.startsWith(DATA_5, new byte[]{1, 2}));
     }
 
     @Test
@@ -144,15 +143,15 @@ public class ArrayUtilsTest extends TestBase {
 
     @Test
     public void testStartsWithFail3() throws Exception {
-        assertFalse(ArrayUtils.startsWith(DATA_5, new byte[] {2, 3}));
+        assertFalse(ArrayUtils.startsWith(DATA_5, new byte[]{2, 3}));
     }
 
     @Test
     public void testStartsWithFail4() throws Exception {
-        assertFalse(ArrayUtils.startsWith(DATA_5, new byte[] {1, 2, 3, 4, 5, 6}));
+        assertFalse(ArrayUtils.startsWith(DATA_5, new byte[]{1, 2, 3, 4, 5, 6}));
     }
 
     private byte[] b(int b) {
-        return new byte[] {(byte) b};
+        return new byte[]{(byte) b};
     }
 }
