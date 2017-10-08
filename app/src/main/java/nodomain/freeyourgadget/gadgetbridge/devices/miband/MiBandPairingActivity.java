@@ -130,7 +130,7 @@ public class MiBandPairingActivity extends GBActivity {
         }
 
         if (!MiBandCoordinator.hasValidUserInfo()) {
-            Intent userSettingsIntent = new Intent(this, MiBandPreferencesActivity.class);
+           Intent userSettingsIntent = new Intent(this, MiBandPreferencesActivity.class);
             startActivityForResult(userSettingsIntent, REQ_CODE_USER_SETTINGS, null);
             return;
         }
